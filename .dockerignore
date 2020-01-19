@@ -1,0 +1,8 @@
+node_modules/
+report/
+bin/
+*.swp
+*.log
+tests_output/
+.npm/
+.git/
