@@ -7,7 +7,7 @@ ARG GIT_COMMIT="none"
 
 # Install utilities
 RUN apt-get update --fix-missing && apt-get -y upgrade
-RUN apt-get update && apt-get -y install firefox-esr wget
+RUN apt-get update && apt-get -y install firefox-esr wget gnupg2
 
 # Install latest chrome dev package.
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
