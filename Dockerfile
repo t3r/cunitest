@@ -2,8 +2,9 @@ FROM node:12-slim
 
 # Install utilities
 RUN apt-get update --fix-missing && apt-get -y upgrade && \
-    apt-get -y --no-install-recommends install firefox-esr wget gnupg2 && \
-    wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
+    apt-get -y --no-install-recommends install firefox-esr wget gnupg2 
+# Don't combine this, we need gnupg2 for apt-key
+RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
     && sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list' \
     && apt-get update \
     && apt-get install -y google-chrome-stable --no-install-recommends \
