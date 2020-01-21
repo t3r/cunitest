@@ -20,4 +20,7 @@ To explicitely test against chrome
 	docker run --rm -v $PWD:/home/node/tests -eLAUNCH_URL=http://my.host/something -eTEST_ENVIRONMENT=DEV MyLocalTest torstend/cunitest npm run test:chrome
 
 To explicitely test against firefox
+
 	docker run --rm -v $PWD:/home/node/tests -eLAUNCH_URL=http://my.host/something -eTEST_ENVIRONMENT=DEV MyLocalTest torstend/cunitest npm run test:firefox
+
+
