@@ -29,6 +29,7 @@ AfterAll(async () => {
       launchReport: false,
       metadata: {
         'Test Environment': process.env.TEST_ENVIRONMENT || 'Test',
+        'Nightwatch Environment': process.env.NIGHTWATCH_ENV || 'Unknown',
       }
     });
   }, 1000);
