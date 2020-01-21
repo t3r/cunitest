@@ -21,6 +21,7 @@ RUN mkdir --parents /home/node/report && \
     chown --recursive node:node /home/node
 USER node
 
+ENV TEST_ENVIRONMENT=Docker
 # Disable Lighthouse error reporting to prevent prompt.
 ENV CI=true
 CMD ["npm", "test"]

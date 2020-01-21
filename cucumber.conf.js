@@ -28,8 +28,7 @@ AfterAll(async () => {
       reportSuiteAsScenarios: true,
       launchReport: false,
       metadata: {
-        'App Version': '0.3.2',
-        'Test Environment': 'POC'
+        'Test Environment': process.env.TEST_ENVIRONMENT || 'Test',
       }
     });
   }, 1000);
