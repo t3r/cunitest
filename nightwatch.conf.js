@@ -33,7 +33,7 @@ module.exports = {
           "enabled": true,
           "on_failure": true,
           "on_error": true,
-          "path": "report/screenshots/"
+          "path": "tests/report/screenshots/"
         },
       },
       firefox: {

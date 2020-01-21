@@ -6,7 +6,7 @@
   "scripts": {
     "test:chrome": "cross-env NIGHTWATCH_ENV=chrome npm test",
     "test:firefox": "cross-env NIGHTWATCH_ENV=firefox npm test",
-    "test": "mkdirp report && cucumber-js --require-module @babel/register --require cucumber.conf.js --require steps --format node_modules/cucumber-pretty --format json:report/cucumber_report.json",
+    "test": "mkdirp tests/report && cucumber-js --require-module @babel/register --require cucumber.conf.js --require tests/steps --format node_modules/cucumber-pretty --format json:tests/report/cucumber_report.json tests/features",
     "debug": "cross-env DEBUG=nightwatch-api NIGHTWATCH_ENV=chrome NIGHTWATCH_VERBOSE=true node --inspect ./node_modules/cucumber/bin/cucumber-js --require-module @babel/register --require cucumber.conf.js --require step-definitions --format node_modules/cucumber-pretty"
   },
   "repository": "https://github.com/t3r/cunitest.git",
