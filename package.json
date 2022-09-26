@@ -24,7 +24,7 @@
     "cucumber-pretty": "^6.0.0",
     "geckodriver": "^2.0.4",
     "mkdirp": "^1.0.4",
-    "nightwatch": "^1.7.8",
+    "nightwatch": "^1.7.13",
     "nightwatch-api": "latest"
   }
 }
